@@ -1,7 +1,7 @@
 //board
 let board;
-let boardWidth = 350;
-let boardHeight = 540;
+let boardWidth = 650;
+let boardHeight = 900;
 let context;
 
 //bird
@@ -19,7 +19,7 @@ let bird = {
 
 //pipes
 let pipeArray = [];
-let pipeWidth = 64;
+let pipeWidth = 60
 let pipeHeight = 512;
 let pipeX = boardWidth;
 let pipeY = 0;
@@ -46,14 +46,14 @@ window.onload = function(){
 
     //load image
     birdImg = new Image();
-    birdImg.src = "images/bird.png";
+    birdImg.src = "/bird.png";
     birdImg.onload = function(){
         context.drawImage(birdImg, bird.x, bird.y, bird.width, bird.height)
     }
     topPipeImg = new Image();
-    topPipeImg.src = 'images/top.jpeg';
+    topPipeImg.src = '/top.jpeg';
     bottomPipeImg = new Image();
-    bottomPipeImg.src = 'images/bottom.jpeg';
+    bottomPipeImg.src = '/bottom.jpeg';
 
     requestAnimationFrame(update);
     setInterval(placePipes, 1500);
